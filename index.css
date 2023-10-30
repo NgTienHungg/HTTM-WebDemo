@@ -1,0 +1,48 @@
+/* Reset lại giá trị mặc định của body và xóa padding/margin */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("imgs/bg.png"); /* Đường dẫn đến tệp ảnh nền */
+  background-size: cover; /* Để làm cho ảnh nền phủ kín phần nền của trang */
+  background-repeat: no-repeat; /* Ngăn lặp lại ảnh nền */
+  background-attachment: fixed; /* Giữ ảnh nền tĩnh khi cuộn trang */
+  background-position: center center; /* Canh giữa ảnh nền */
+}
+
+.login-container {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Đặt box-sizing để tính toán padding và border trong kích thước tổng cộng */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0074a9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005c94;
+}

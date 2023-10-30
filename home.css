@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Lato", sans-serif; */
+
+  background-image: url("imgs/bg.png"); /* Đường dẫn tới ảnh nền */
+  background-size: cover; /* Để đảm bảo ảnh nền kích thước phù hợp với trang */
+  background-repeat: no-repeat; /* Ngăn lặp lại ảnh nền */
+  background-attachment: fixed; /* Giữ ảnh nền cố định khi cuộn trang */
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  align-items: center;
+}
+
+/* Định dạng CSS cho dòng chữ "Quản lý mẫu" */
+.page-title {
+  font-size: 25px; /* Độ lớn của chữ */
+  font-weight: bold; /* Chữ in đậm */
+  color: #ffffff; /* Màu chữ */
+  margin: 0 auto; /* Để căn giữa dòng chữ theo chiều ngang */
+}
+
+/* Định dạng CSS cho nút "Thêm mẫu" */
+.add-sample-button {
+  background-color: #00ff00; /* Màu nền của nút "Thêm mẫu" */
+  color: #fff; /* Màu chữ trên nút */
+  padding: 10px 20px; /* Kích thước nút */
+  border-radius: 5px; /* Góc bo tròn */
+  margin-right: 10px;
+}
+
+/* Định dạng CSS cho nút "Đăng xuất" */
+.logout-button {
+  background-color: #ff0000; /* Màu nền của nút "Đăng xuất" */
+  color: #fff; /* Màu chữ trên nút */
+  padding: 10px 20px; /* Kích thước nút */
+  border-radius: 5px; /* Góc bo tròn */
+}
+
+.back-button {
+  background-color: rgb(52, 207, 0);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#audioTable th {
+  background-color: #0074a9; /* Màu nền */
+  color: #fff; /* Màu chữ */
+  font-weight: bold; /* Chữ in đậm */
+  font-size: 22px; /* Đổi kích thước font chữ */
+  text-align: center; /* Căn giữa nội dung trong cột */
+  padding: 10px; /* Khoảng cách nội dung và viền */
+  border: 1px solid #515151; /* Đường viền cho từng ô cột */
+}
+
+#audioTable th {
+  height: 50px;
+}
+
+#audioTable {
+  width: 80%; /* Độ rộng của bảng */
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #8b8b8b; /* Đường viền */
+  margin: 50px auto;
+  position: relative; /* Để thiết lập vị trí tương đối cho bảng */
+}
+
+/* Định dạng CSS cho các ô của bảng */
+#audioTable td {
+  padding: 10px; /* Khoảng cách giữa nội dung và đường viền */
+  border: 1px solid #8b8b8b; /* Đường viền cho từng ô cột */
+}
+
+/* Định dạng CSS cho hàng chẵn */
+#audioTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#audioTable tr:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+/* Định dạng CSS cho nút "Xem" */
+.audio-view {
+  background-color: #0074a9; /* Màu xanh dương */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* -------------------------------------------------- */
+
+/* them mau */
+/* CSS cho nút "Thêm mẫu" */
+.add-sample-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Màu nền của nút */
+  color: #fff; /* Màu chữ */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu khi di chuột qua nút */
+}
+
+.add-sample-button:hover {
+  background-color: #0056b3; /* Màu nền khi di chuột qua */
+}
+
+/* Căn giữa nút */
+#add-sample-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* -------------------------------------------------- */
+
+#sample-info-container {
+  background-color: #ffffff00;
+  color: white;
+  font-size: 18px;
+  margin: 20px; /* Khoảng cách tổng thể xung quanh container */
+  padding: 20px; /* Khoảng cách bên trong container */
+  display: flex; /* Sử dụng flexbox để sắp xếp các phần */
+}
+
+#sample-info-container p {
+  margin-bottom: 10px; /* Khoảng cách giữa các đoạn văn bản (paragrapghs) */
+}
+
+.info-item p {
+  margin-bottom: 10px;
+}
+
+.audio-info {
+  flex: 30%; /* Độ rộng của phần "Audio" */
+  padding-right: 20px; /* Khoảng cách phải giữa "Audio" và "Transcript" */
+  margin-left: 30px;
+}
+
+.url-link {
+  color: #0000ff;
+}
+
+.transcript-info {
+  flex: 70%; /* Độ rộng của phần "Transcript" */
+}
+
+.transcript-content {
+  width: 90%;
+  height: 200px;
+  font-size: 18px;
+  margin-top: 10px; /* Khoảng cách từ phía trên của vùng textarea */
+  color: #fff;
+  background-color: rgba(244, 244, 244, 0.203);
+  border: none; /* Bỏ viền */
+}
+
+/* Định dạng CSS cho container của nút */
+.button-container {
+  text-align: left; /* Căn giữa nút trong container */
+  margin-top: 30px; /* Khoảng cách từ container đến phần dưới */
+}
+
+/* Định dạng CSS cho nút "Xoá" */
+.delete-button {
+  background-color: #ff0000; /* Màu đỏ */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px; /* Khoảng cách bên phải giữa nút "Xoá" và "Sửa" */
+  margin-bottom: 10px;
+}
+
+/* Định dạng CSS cho nút "Sửa" */
+.edit-button {
+  background-color: #ffff00; /* Màu vàng */
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.full-width-input {
+  width: 90%;
+  color: #fff;
+  background-color: rgba(244, 244, 244, 0.203);
+  border: none; /* Bỏ viền */
+}
