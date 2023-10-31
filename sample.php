@@ -17,7 +17,7 @@ if (!isset($_GET['id'])) {
 $idSample = $_GET['id'];
 
 // Truy vấn cơ sở dữ liệu để lấy thông tin của mẫu dựa trên idSample
-$sql = "SELECT audio.name AS audioName, audio.path AS audioPath, audio.createTime AS audioCreateTime, audio.lastUpdate AS audioLastUpdate, transcript.name AS transcriptName, transcript.content AS transcriptContent, transcript.createTime AS transcriptCreateTime, transcript.lastUpdate AS transcriptLastUpdate
+$sql = "SELECT audio.name AS audioName, audio.path AS audioPath, audio.date AS audioCreateTime, audio.lastUpdate AS audioLastUpdate, transcript.name AS transcriptName, transcript.content AS transcriptContent, transcript.date AS transcriptCreateTime, transcript.lastUpdate AS transcriptLastUpdate
         FROM sample
         JOIN audio ON sample.audioId = audio.id
         JOIN transcript ON sample.transcriptId = transcript.id
