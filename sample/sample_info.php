@@ -61,7 +61,6 @@ if ($result->num_rows > 0) {
     <!-- Hiển thị thông tin mẫu -->
     <form method="post" action="update_sample.php">
         <div id="sample-info-container">
-
             <!-- khai báo idSample để truyền vào form -->
             <input type="hidden" name="idSample" value="<?php echo $idSample; ?>">
 
@@ -103,18 +102,20 @@ if ($result->num_rows > 0) {
                 </p>
             </div>
         </div>
+
+        <!-- Hiển thị nút "Sửa" -->
+        <div class="button-wrapper">
+            <button type="submit" id="edit-button" class="edit-button" onclick="toggleEditing()">Sửa</button>
+        </div>
     </form>
 
-    <!-- Hiển thị nút "Xoá" và "Sửa" -->
+    <!-- Hiển thị nút "Sửa" -->
     <div class="button-container">
         <div class="button-wrapper">
             <form method="post" action="delete_sample.php">
                 <input type="hidden" name="idSample" value="<?php echo $idSample; ?>">
                 <button type="submit" name="deleteSample" class="delete-button">Xoá</button>
             </form>
-        </div>
-        <div class="button-wrapper">
-            <button id="edit-button" class="edit-button" onclick="toggleEditing()">Sửa</button>
         </div>
     </div>
 

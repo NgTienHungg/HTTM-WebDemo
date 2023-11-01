@@ -1,7 +1,7 @@
 <?php
 session_start(); // Bắt đầu phiên làm việc của session
 require_once('../connect.php'); // Nhúng file kết nối tới database
-require_once 'AccountManager.php';
+require_once 'AccountDAO.php';
 
 // Lấy thông tin từ biểu mẫu
 $newUsername = $_POST['new-username'];
@@ -16,7 +16,7 @@ if ($newPassword !== $confirmPassword) {
 }
 
 // Tạo một đối tượng Account
-$accountManager = new AccountController($conn);
+$accountManager = new AccountDAO($conn);
 
 // Kiểm tra xem tài khoản đã tồn tại trong cơ sở dữ liệu chưa
 if ($accountManager->isUsernameTaken($newUsername)) {

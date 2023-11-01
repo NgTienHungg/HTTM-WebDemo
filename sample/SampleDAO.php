@@ -1,5 +1,5 @@
 <?php
-class SampleController
+class SampleDAO
 {
     private $conn;
 

@@ -1,14 +1,14 @@
 <?php
 session_start(); // Bắt đầu phiên làm việc của session
 require_once '../connect.php'; // Kết nối đến cơ sở dữ liệu MySQL
-require_once 'AccountController.php';
+require_once 'AccountDAO.php';
 
 // Lấy dữ liệu từ biểu mẫu đăng nhập
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Tạo một đối tượng Account
-$accountManager = new AccountController($conn);
+$accountManager = new AccountDAO($conn);
 
 if ($accountManager->authenticate($username,$password)) {
     // Tài khoản hợp lệ

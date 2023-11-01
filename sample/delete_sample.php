@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['deleteSample'])) {
     $idSample = $_POST['idSample'];
 
     // Tạo một thể hiện của SampleController và gọi phương thức deleteSample
-    $sampleController = new SampleController($conn);
+    $sampleController = new SampleDAO($conn);
     $result = $sampleController->deleteSample($idSample);
 
     if ($result) {

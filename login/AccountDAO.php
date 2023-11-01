@@ -1,5 +1,5 @@
 <?php
-class AccountController
+class AccountDAO
 {
     private $conn;
 

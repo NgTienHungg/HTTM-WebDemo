@@ -2,9 +2,9 @@
 session_start();
 require_once '../connect.php';
 require_once 'Sample.php';
-require_once 'SampleController.php';
+require_once 'SampleDAO.php';
 
-$sampleController = new SampleController($conn);
+$sampleController = new SampleDAO($conn);
 $samples = $sampleController->getAllSamples();
 ?>
 
