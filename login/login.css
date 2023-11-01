@@ -5,23 +5,26 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url("imgs/bg.png"); /* Đường dẫn đến tệp ảnh nền */
+  background-image: url("../imgs/bg.png"); /* Đường dẫn đến tệp ảnh nền */
   background-size: cover; /* Để làm cho ảnh nền phủ kín phần nền của trang */
   background-repeat: no-repeat; /* Ngăn lặp lại ảnh nền */
   background-attachment: fixed; /* Giữ ảnh nền tĩnh khi cuộn trang */
   background-position: center center; /* Canh giữa ảnh nền */
+  z-index: 9;
+
 }
 
 .login-container {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
 }
 
 h1 {
-  margin-top: 0;
+  margin-top: 10px 10px;
 }
 
 input {
@@ -45,4 +48,9 @@ button {
 
 button:hover {
   background-color: #005c94;
+}
+
+.register-button {
+  background-color: rgb(0, 128, 13); /* Đặt màu nền xanh lá cây cho nút đăng ký */
+  color: white; /* Đặt màu chữ trắng cho nút đăng ký */
 }

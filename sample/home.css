@@ -3,7 +3,7 @@ body {
   padding: 0;
   /* font-family: "Lato", sans-serif; */
 
-  background-image: url("imgs/bg.png"); /* Đường dẫn tới ảnh nền */
+  background-image: url("../imgs/bg.png"); /* Đường dẫn tới ảnh nền */
   background-size: cover; /* Để đảm bảo ảnh nền kích thước phù hợp với trang */
   background-repeat: no-repeat; /* Ngăn lặp lại ảnh nền */
   background-attachment: fixed; /* Giữ ảnh nền cố định khi cuộn trang */
@@ -171,8 +171,14 @@ body {
 
 /* Định dạng CSS cho container của nút */
 .button-container {
-  text-align: left; /* Căn giữa nút trong container */
-  margin-top: 30px; /* Khoảng cách từ container đến phần dưới */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.button-wrapper {
+  margin: 0 10px; /* Khoảng cách giữa các nút, có thể điều chỉnh theo nhu cầu */
 }
 
 /* Định dạng CSS cho nút "Xoá" */

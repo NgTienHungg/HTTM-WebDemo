@@ -1,5 +1,5 @@
 <?php
-require_once('connect.php'); // Đảm bảo bạn đã bao gồm tệp connect.php
+require_once('../connect.php'); // Đảm bảo bạn đã bao gồm tệp connect.php
 
 // Kiểm tra xem có dữ liệu đã gửi từ form hay không
 if (isset($_POST['audioName'], $_POST['audioPath'], $_POST['transcriptName'], $_POST['transcriptContent'])) {
@@ -29,8 +29,8 @@ if (isset($_POST['audioName'], $_POST['audioPath'], $_POST['transcriptName'], $_
     if ($currentAudioName !== $audioName || $currentAudioPath !== $audioPath) {
         // Có sự thay đổi trong giá trị, nên chúng ta cập nhật cột "lastUpdate"
         $sqlUpdateAudio = "UPDATE audio
-                        SET name = '$audioName', path = '$audioPath', lastUpdate = NOW()
-                        WHERE id = (SELECT audioId FROM sample WHERE id = $idSample)";
+                           SET name = '$audioName', path = '$audioPath', lastUpdate = NOW()
+                           WHERE id = (SELECT audioId FROM sample WHERE id = $idSample)";
 
         if ($conn->query($sqlUpdateAudio) === TRUE) {
             // Cập nhật bảng "audio" thành công
@@ -75,7 +75,7 @@ if (isset($_POST['audioName'], $_POST['audioPath'], $_POST['transcriptName'], $_
     $conn->close(); // Đóng kết nối cơ sở dữ liệu
 
     // Chuyển hướng về trang sample.php và hiển thị thông báo thành công
-    header("Location: sample.php?id=" . $idSample);
+    header("Location: sample_info.php?id=" . $idSample);
     $_SESSION['update_success'] = true;
     exit();
 

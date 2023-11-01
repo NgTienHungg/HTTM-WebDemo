@@ -7,7 +7,7 @@ function toggleEditing() {
     var editButton = document.getElementById("edit-button");
 
     if (audioNameInput.hasAttribute("readonly")) {
-        event.preventDefault(); 
+        event.preventDefault(); // chặn không đi vào trang khác
         // Bật chế độ chỉnh sửa.
         audioNameInput.removeAttribute("readonly");
         audioPathInput.removeAttribute("readonly");

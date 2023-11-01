@@ -1,10 +1,10 @@
 <?php
 session_start();
-require_once('connect.php');
+require_once('../connect.php');
 
 // Kiểm tra xem người dùng đã đăng nhập hay chưa. Nếu chưa, chuyển hướng về trang đăng nhập hoặc trang khác.
 if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
 }
 
@@ -55,11 +55,11 @@ if ($result->num_rows > 0) {
     <div id="header">
         <a href="home.php" class="back-button">Trang chủ</a>
         <span class="page-title">THÔNG TIN MẪU</span>
-        <a href="index.php" class="logout-button">Đăng xuất</a>
+        <a href="../login/login.php" class="logout-button">Đăng xuất</a>
     </div>
 
     <!-- Hiển thị thông tin mẫu -->
-    <form method="post" action="update_data.php">
+    <form method="post" action="update_sample.php">
         <div id="sample-info-container">
 
             <!-- khai báo idSample để truyền vào form -->
@@ -102,27 +102,23 @@ if ($result->num_rows > 0) {
                     <?php echo $transcriptLastUpdate; ?>
                 </p>
             </div>
-            <!-- Hiển thị nút "Xoá" và "Sửa" -->
-
-            <div class="button-container">
-                <form method="post" action="delete_sample.php">
-                    <input type="hidden" name="idSample" value="<?php echo $idSample; ?>">
-                    <button type="submit" name="deleteSample" class="delete-button">Xoá</button>
-                </form>
-                <button id="edit-button" class="edit-button" onclick="toggleEditing()">Sửa</button>
-
-                <?php
-                // Kiểm tra xem có Session "update_success" đã được đặt hay chưa
-                if (isset($_SESSION['update_success']) && $_SESSION['update_success']) {
-                    echo '<div style="color: green;">Cập nhật thành công</div>';
-                    // Đặt lại Session để không hiển thị thông báo lại nếu người dùng làm mới trang
-                    $_SESSION['update_success'] = false;
-                }
-                ?>
-            </div>
         </div>
     </form>
-    <script src="sample.js"></script>
+
+    <!-- Hiển thị nút "Xoá" và "Sửa" -->
+    <div class="button-container">
+        <div class="button-wrapper">
+            <form method="post" action="delete_sample.php">
+                <input type="hidden" name="idSample" value="<?php echo $idSample; ?>">
+                <button type="submit" name="deleteSample" class="delete-button">Xoá</button>
+            </form>
+        </div>
+        <div class="button-wrapper">
+            <button id="edit-button" class="edit-button" onclick="toggleEditing()">Sửa</button>
+        </div>
+    </div>
+
+    <script src="sample_info.js"></script>
 </body>
 
 </html>
