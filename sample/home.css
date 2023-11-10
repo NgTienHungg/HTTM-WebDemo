@@ -195,10 +195,15 @@ body {
 /* Định dạng CSS cho nút "Sửa" */
 .edit-button {
   background-color: #ffff00; /* Màu vàng */
-  color: #000;
+  color: white; /* Màu chữ trắng */
+  border: none;
   padding: 10px 20px;
+  text-align: center;
   text-decoration: none;
-  border-radius: 5px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 auto; /* Canh giữa nút theo chiều ngang */
+  display: block; /* Hiển thị nút dưới dạng block để canh giữa theo chiều ngang */
 }
 
 .full-width-input {
@@ -206,4 +211,17 @@ body {
   color: #fff;
   background-color: rgba(244, 244, 244, 0.203);
   border: none; /* Bỏ viền */
+}
+
+.add-button {
+  background-color: #4caf50; /* Màu xanh lá cây */
+  color: white; /* Màu chữ trắng */
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 auto; /* Canh giữa nút theo chiều ngang */
+  display: block; /* Hiển thị nút dưới dạng block để canh giữa theo chiều ngang */
 }
